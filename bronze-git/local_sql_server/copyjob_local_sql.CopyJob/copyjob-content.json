@@ -1,0 +1,74 @@
+{
+  "properties": {
+    "jobMode": "CDC",
+    "source": {
+      "type": "SqlServerTable",
+      "connectionSettings": {
+        "type": "SqlServer",
+        "typeProperties": {
+          "database": "database_new"
+        },
+        "externalReferences": {
+          "connection": "785a1fcf-9e59-4bba-8d99-6819cab39a04"
+        }
+      }
+    },
+    "destination": {
+      "type": "DataWarehouseTable",
+      "connectionSettings": {
+        "type": "DataWarehouse",
+        "typeProperties": {
+          "workspaceId": "02388c9c-dc85-46bb-9eaf-4b3762849643",
+          "artifactId": "94111a04-f71c-41b4-9c62-e36ee442a9e9",
+          "endPoint": "m4ybql57hwteraxrv2eqj32rly-tsgdqauf3s5unhvpjm3wfbewim.datawarehouse.fabric.microsoft.com"
+        },
+        "externalReferences": {
+          "connection": "f9cf5fab-fceb-4898-8130-4eccb2cbd6e8"
+        }
+      }
+    },
+    "policy": {
+      "timeout": "0.12:00:00"
+    }
+  },
+  "activities": [
+    {
+      "id": "75da319c-61c4-4181-a904-6cd4004c6e6d",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "dbo",
+            "table": "SampleData100"
+          },
+          "changeDataSettings": {
+            "readMethod": "SnapshotPlusIncremental",
+            "columns": [
+              {
+                "name": "ID",
+                "type": "Int32",
+                "physicalType": "int"
+              }
+            ]
+          }
+        },
+        "destination": {
+          "tableOption": "autoCreate",
+          "datasetSettings": {
+            "schema": "dbo",
+            "table": "SampleData100"
+          }
+        },
+        "enableStaging": true,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    }
+  ]
+}

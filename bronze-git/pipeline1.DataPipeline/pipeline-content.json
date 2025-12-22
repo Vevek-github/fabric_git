@@ -1,0 +1,152 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "BinarySource",
+            "formatSettings": {
+              "type": "BinaryReadSettings"
+            },
+            "storeSettings": {
+              "type": "LakehouseReadSettings",
+              "recursive": true
+            },
+            "datasetSettings": {
+              "type": "Binary",
+              "typeProperties": {
+                "location": {
+                  "type": "LakehouseLocation"
+                }
+              },
+              "connectionSettings": {
+                "name": "input",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "artifactId": "0d0eff1a-c9a2-465c-9cda-68f170e346f6",
+                    "workspaceId": "02388c9c-dc85-46bb-9eaf-4b3762849643",
+                    "rootFolder": "Files"
+                  },
+                  "externalReferences": {
+                    "connection": "36f20f50-5b63-449d-bf99-258c9379abd0"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "enableStaging": false
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Copy data1",
+        "state": "Inactive",
+        "onInactiveMarkAs": "Succeeded",
+        "dependsOn": []
+      },
+      {
+        "type": "GetMetadata",
+        "typeProperties": {
+          "datasetSettings": {
+            "type": "DelimitedText",
+            "typeProperties": {
+              "location": {
+                "type": "LakehouseLocation"
+              },
+              "columnDelimiter": ",",
+              "quoteChar": "\"",
+              "escapeChar": "\\",
+              "firstRowAsHeader": true
+            },
+            "schema": [],
+            "connectionSettings": {
+              "name": "input",
+              "properties": {
+                "type": "Lakehouse",
+                "typeProperties": {
+                  "artifactId": "70e346f6-68f1-9cda-465c-c9a20d0eff1a",
+                  "workspaceId": "00000000-0000-0000-0000-000000000000",
+                  "rootFolder": "Files"
+                },
+                "externalReferences": {
+                  "connection": "36f20f50-5b63-449d-bf99-258c9379abd0"
+                },
+                "annotations": []
+              }
+            },
+            "annotations": []
+          },
+          "fieldList": [
+            "childItems",
+            "itemName",
+            "itemType"
+          ],
+          "storeSettings": {
+            "type": "LakehouseReadSettings",
+            "recursive": true,
+            "enablePartitionDiscovery": false
+          },
+          "formatSettings": {
+            "type": "DelimitedTextReadSettings"
+          }
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Get Metadata1",
+        "dependsOn": []
+      },
+      {
+        "type": "Office365Email",
+        "typeProperties": {
+          "body": "<p>@{pipeline().DataFactory}@{pipeline().Pipeline}@{pipeline().RunId}@{pipeline().TriggerType}@{pipeline().TriggerId}@{pipeline().PipelineName}@{pipeline()?.TriggerEvent?.Subject}@{pipeline()?.TriggerEvent?.Subject}@{pipeline()?.TriggerEvent?.FileName}</p>",
+          "to": "sathvik.vemula@sparity.com",
+          "subject": "test",
+          "importance": "High"
+        },
+        "externalReferences": {
+          "connection": "dbfc102e-c4b5-4f3a-a1d9-bbc05433ea53"
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Office365Email1",
+        "dependsOn": [
+          {
+            "activity": "Get Metadata1",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ],
+    "variables": {
+      "item_name": {
+        "type": "Array"
+      },
+      "child_item": {
+        "type": "String"
+      },
+      "check_var": {
+        "type": "String"
+      }
+    }
+  }
+}

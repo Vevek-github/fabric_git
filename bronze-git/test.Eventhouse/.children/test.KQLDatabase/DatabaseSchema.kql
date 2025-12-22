@@ -1,0 +1,9 @@
+// KQL script
+// Use management commands in this script to configure your database items, such as tables, functions, materialized views, and more.
+
+
+.create-merge table testTable_lakehouse (Attribute:string, JudgeName:string, ['Presenter Name']:string, Value:long) 
+.create-or-alter table testTable_lakehouse ingestion csv mapping 'testTable_lakehouse_mapping'
+```
+[{"Properties":{"Ordinal":"0"},"column":"Attribute","datatype":""},{"Properties":{"Ordinal":"1"},"column":"JudgeName","datatype":""},{"Properties":{"Ordinal":"2"},"column":"Presenter Name","datatype":""},{"Properties":{"Ordinal":"3"},"column":"Value","datatype":""}]
+```
