@@ -1,0 +1,111 @@
+{
+  "sources": [
+    {
+      "id": "65886bee-c21b-4721-829b-6e8d8e4c7188",
+      "name": "local-sql-server",
+      "type": "FabricOneLakeEvents",
+      "properties": {
+        "tenantId": "2f183067-3dbf-48a6-82f1-ae8904ef515e",
+        "workspaceId": "02388c9c-dc85-46bb-9eaf-4b3762849643",
+        "itemId": "94111a04-f71c-41b4-9c62-e36ee442a9e9",
+        "oneLakePaths": [
+          "/Tables"
+        ],
+        "includedEventTypes": [
+          "Microsoft.Fabric.OneLake.FileCreated",
+          "Microsoft.Fabric.OneLake.FileDeleted",
+          "Microsoft.Fabric.OneLake.FileRenamed",
+          "Microsoft.Fabric.OneLake.FolderCreated",
+          "Microsoft.Fabric.OneLake.FolderDeleted",
+          "Microsoft.Fabric.OneLake.FolderRenamed"
+        ],
+        "filters": []
+      }
+    },
+    {
+      "id": "e8dcba00-1953-4409-a1c5-ce6a4df6b742",
+      "name": "fabric-onelake-events",
+      "type": "FabricOneLakeEvents",
+      "properties": {
+        "tenantId": "2f183067-3dbf-48a6-82f1-ae8904ef515e",
+        "workspaceId": "02388c9c-dc85-46bb-9eaf-4b3762849643",
+        "itemId": "825b4455-90ea-41fb-a3f2-24f4ff9df4e1",
+        "oneLakePaths": [
+          "/Tables"
+        ],
+        "includedEventTypes": [
+          "Microsoft.Fabric.OneLake.FileCreated",
+          "Microsoft.Fabric.OneLake.FileRenamed",
+          "Microsoft.Fabric.OneLake.FolderCreated",
+          "Microsoft.Fabric.OneLake.FolderDeleted",
+          "Microsoft.Fabric.OneLake.FolderRenamed",
+          "Microsoft.Fabric.OneLake.FileDeleted"
+        ],
+        "filters": [
+          {
+            "operatorType": "IsNotNull",
+            "key": "subject"
+          },
+          {
+            "values": [
+              "/Tables"
+            ],
+            "operatorType": "StringBeginsWith",
+            "key": "subject"
+          }
+        ]
+      }
+    }
+  ],
+  "destinations": [
+    {
+      "id": "4ebc1e2e-c5b3-41c9-8bff-12ff0d167ce7",
+      "name": "Eventhouse",
+      "type": "Eventhouse",
+      "properties": {
+        "dataIngestionMode": "ProcessedIngestion",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "itemId": "580eb43e-aafa-9471-4f33-379446499a8e",
+        "databaseName": "test",
+        "tableName": "onelake_events",
+        "inputSerialization": {
+          "type": "Json",
+          "properties": {
+            "encoding": "UTF8"
+          }
+        }
+      },
+      "inputNodes": [
+        {
+          "name": "onelake_events_eventstream-stream"
+        }
+      ],
+      "inputSchemas": [
+        {
+          "name": "onelake_events_eventstream-stream",
+          "schema": {
+            "columns": []
+          }
+        }
+      ]
+    }
+  ],
+  "streams": [
+    {
+      "id": "02c0cfd8-61ca-4699-b364-8a6f0d72a921",
+      "name": "onelake_events_eventstream-stream",
+      "type": "DefaultStream",
+      "properties": {},
+      "inputNodes": [
+        {
+          "name": "fabric-onelake-events"
+        },
+        {
+          "name": "local-sql-server"
+        }
+      ]
+    }
+  ],
+  "operators": [],
+  "compatibilityLevel": "1.0"
+}

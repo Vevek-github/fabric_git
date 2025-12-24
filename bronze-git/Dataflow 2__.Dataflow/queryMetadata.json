@@ -1,0 +1,20 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {},
+  "name": "Dataflow 2__",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "a_final_common_table": {
+      "queryId": "9f52c709-5fd8-4226-8b3c-c119ecc620d0",
+      "queryName": "a_final_common_table"
+    }
+  },
+  "connections": [
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"4735f433-adf1-45df-a25a-d853eab86a8a\",\"DatasourceId\":\"36f20f50-5b63-449d-bf99-258c9379abd0\"}"
+    }
+  ]
+}

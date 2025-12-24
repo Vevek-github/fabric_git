@@ -1,0 +1,423 @@
+table a_final_common_table
+	lineageTag: b826ea26-379f-4219-851e-993363f8e0c6
+	sourceLineageTag: [dbo].[a_final_common_table]
+
+	column row_index
+		dataType: int64
+		formatString: 0
+		lineageTag: 0ce56d06-194b-4d21-a012-48310f1eff42
+		sourceLineageTag: row_index
+		summarizeBy: sum
+		sourceColumn: row_index
+
+		annotation SummarizationSetBy = Automatic
+
+	column IncidentId
+		dataType: int64
+		formatString: 0
+		lineageTag: 55b821c0-e57a-4c2f-857b-440daeeecf0f
+		sourceLineageTag: IncidentId
+		summarizeBy: count
+		sourceColumn: IncidentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Type
+		dataType: string
+		lineageTag: 3ebe41a1-94df-4005-8433-8a38c0249d4a
+		sourceLineageTag: Type
+		summarizeBy: none
+		sourceColumn: Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column SensorNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 20bcbb97-2743-40b5-9a3f-753e5c140c59
+		sourceLineageTag: SensorNumber
+		summarizeBy: sum
+		sourceColumn: SensorNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column station_id
+		dataType: int64
+		formatString: 0
+		lineageTag: f838d1d8-3381-40db-ad9c-560ea8be126f
+		sourceLineageTag: station_id
+		summarizeBy: sum
+		sourceColumn: station_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Time
+		dataType: int64
+		formatString: 0
+		lineageTag: 55d56831-45f8-4432-acb6-dd352843a191
+		sourceLineageTag: Time
+		summarizeBy: sum
+		sourceColumn: Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column Week
+		dataType: int64
+		formatString: 0
+		lineageTag: 280c0c46-021f-420f-9102-c14b61b112d8
+		sourceLineageTag: Week
+		summarizeBy: sum
+		sourceColumn: Week
+
+		annotation SummarizationSetBy = Automatic
+
+	column DESCRIPTION
+		dataType: string
+		lineageTag: 299d48ef-ae3e-4873-b25a-932daf862175
+		sourceLineageTag: DESCRIPTION
+		summarizeBy: none
+		sourceColumn: DESCRIPTION
+
+		annotation SummarizationSetBy = Automatic
+
+	column Data_Type
+		dataType: string
+		lineageTag: 1b604438-d02f-4b53-af68-9c0b26b5fe58
+		sourceLineageTag: Data_Type
+		summarizeBy: none
+		sourceColumn: Data_Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kind
+		dataType: string
+		lineageTag: 23252fc0-69cc-4bab-8b0e-21eb429dfa51
+		sourceLineageTag: Kind
+		summarizeBy: none
+		sourceColumn: Kind
+
+		annotation SummarizationSetBy = Automatic
+
+	column Period
+		dataType: string
+		lineageTag: 30284e7c-609a-4c73-82ad-bbd7b7b6f864
+		sourceLineageTag: Period
+		summarizeBy: none
+		sourceColumn: Period
+
+		annotation SummarizationSetBy = Automatic
+
+	column Data1
+		dataType: double
+		lineageTag: f636c771-b8a2-406d-ba02-9043407ee623
+		sourceLineageTag: Data1
+		summarizeBy: sum
+		sourceColumn: Data1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Data2
+		dataType: double
+		lineageTag: a08bb662-3f14-402c-ab9c-44de04688bf7
+		sourceLineageTag: Data2
+		summarizeBy: sum
+		sourceColumn: Data2
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Data3
+		dataType: double
+		lineageTag: ead68a8f-1dcf-48d4-bed4-ecdca0c6e457
+		sourceLineageTag: Data3
+		summarizeBy: sum
+		sourceColumn: Data3
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Data4
+		dataType: double
+		lineageTag: b465bd8f-9ad8-4113-a6c7-64560e539e0f
+		sourceLineageTag: Data4
+		summarizeBy: sum
+		sourceColumn: Data4
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Data5
+		dataType: double
+		lineageTag: 3607d59e-4e05-4464-8f82-62de38a95f4d
+		sourceLineageTag: Data5
+		summarizeBy: sum
+		sourceColumn: Data5
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Data6
+		dataType: double
+		lineageTag: 70025fe5-773a-4f40-99c6-76eeb5d48075
+		sourceLineageTag: Data6
+		summarizeBy: sum
+		sourceColumn: Data6
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Data7
+		dataType: double
+		lineageTag: 9fa5339f-e08c-49e2-a2d7-0a417a1ca733
+		sourceLineageTag: Data7
+		summarizeBy: sum
+		sourceColumn: Data7
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Data8
+		dataType: double
+		lineageTag: 1db95495-74ec-48aa-be33-50f9acc276d5
+		sourceLineageTag: Data8
+		summarizeBy: sum
+		sourceColumn: Data8
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Data9
+		dataType: double
+		lineageTag: d58e41cf-b705-402a-8423-c61492372f84
+		sourceLineageTag: Data9
+		summarizeBy: sum
+		sourceColumn: Data9
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Data10
+		dataType: double
+		lineageTag: 388bbaac-f744-49ad-9d88-010d26a5cdb8
+		sourceLineageTag: Data10
+		summarizeBy: sum
+		sourceColumn: Data10
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Data11
+		dataType: double
+		lineageTag: defa7291-797d-4a00-9d0e-be2dbf5a6e2c
+		sourceLineageTag: Data11
+		summarizeBy: sum
+		sourceColumn: Data11
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Data12
+		dataType: double
+		lineageTag: 788737b4-966f-431a-ae42-dae5c8b3e524
+		sourceLineageTag: Data12
+		summarizeBy: sum
+		sourceColumn: Data12
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Data13
+		dataType: double
+		lineageTag: 8559e344-78f5-42c2-a8dc-0567a00ecdf3
+		sourceLineageTag: Data13
+		summarizeBy: sum
+		sourceColumn: Data13
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Data14
+		dataType: double
+		lineageTag: 5a351535-4976-4907-9bc1-6b40e1593f86
+		sourceLineageTag: Data14
+		summarizeBy: sum
+		sourceColumn: Data14
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Data15
+		dataType: double
+		lineageTag: 8e1e4e53-acad-438a-b994-1e9b411656d5
+		sourceLineageTag: Data15
+		summarizeBy: sum
+		sourceColumn: Data15
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Data16
+		dataType: double
+		lineageTag: 95313085-7585-4684-b2a6-16d8ee6e493f
+		sourceLineageTag: Data16
+		summarizeBy: sum
+		sourceColumn: Data16
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Data17
+		dataType: double
+		lineageTag: 0778d575-e62d-46ec-b5a2-7c8c572ee749
+		sourceLineageTag: Data17
+		summarizeBy: sum
+		sourceColumn: Data17
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Data18
+		dataType: double
+		lineageTag: a8f3e8fa-e327-431b-b2ea-0b902ce93211
+		sourceLineageTag: Data18
+		summarizeBy: sum
+		sourceColumn: Data18
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Data19
+		dataType: double
+		lineageTag: 1a27308f-d9b5-4bba-a5e6-52631abc6b18
+		sourceLineageTag: Data19
+		summarizeBy: sum
+		sourceColumn: Data19
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Data20
+		dataType: double
+		lineageTag: aace2da7-c4f6-457a-a4fa-de912071a226
+		sourceLineageTag: Data20
+		summarizeBy: sum
+		sourceColumn: Data20
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Data21
+		dataType: double
+		lineageTag: 9e35c782-3e09-43c0-b3e3-8439a7064937
+		sourceLineageTag: Data21
+		summarizeBy: sum
+		sourceColumn: Data21
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Data22
+		dataType: double
+		lineageTag: 0389608d-a880-477f-92b4-7a8d6b48e27e
+		sourceLineageTag: Data22
+		summarizeBy: sum
+		sourceColumn: Data22
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Data23
+		dataType: double
+		lineageTag: c04e7d92-b063-4d54-8f3e-741c800731ef
+		sourceLineageTag: Data23
+		summarizeBy: sum
+		sourceColumn: Data23
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Data24
+		dataType: double
+		lineageTag: 39111c55-bf41-40ea-80cb-3fa4b682446a
+		sourceLineageTag: Data24
+		summarizeBy: sum
+		sourceColumn: Data24
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Data25
+		dataType: double
+		lineageTag: 153b0579-6922-4c8b-8e7b-d48d3d997fa8
+		sourceLineageTag: Data25
+		summarizeBy: sum
+		sourceColumn: Data25
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Percentage
+		dataType: double
+		lineageTag: 529c946d-65b2-4bfe-81a8-358fb0edd185
+		sourceLineageTag: Percentage
+		summarizeBy: sum
+		sourceColumn: Percentage
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Median
+		dataType: double
+		lineageTag: 3138a843-ed71-4e71-99f1-7b671a718399
+		sourceLineageTag: Median
+		summarizeBy: sum
+		sourceColumn: Median
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column tag
+		dataType: int64
+		formatString: 0
+		lineageTag: 3f96b4a3-7231-413b-a7ff-9dedc3a7a06c
+		sourceLineageTag: tag
+		summarizeBy: sum
+		sourceColumn: tag
+
+		annotation SummarizationSetBy = Automatic
+
+	partition a_final_common_table = entity
+		mode: directLake
+		source
+			entityName: a_final_common_table
+			schemaName: dbo
+			expressionSource: 'DirectLake - input'
+

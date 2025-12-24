@@ -6,10 +6,10 @@
       "jobType": "Execute",
       "configuration": {
         "type": "Cron",
-        "startDateTime": "2025-12-15T16:11:25.786",
-        "endDateTime": "9998-12-31T18:30:00",
+        "startDateTime": "2025-12-23T12:03:00",
+        "endDateTime": "2026-12-23T12:03:00",
         "localTimeZoneId": "India Standard Time",
-        "interval": 1440
+        "interval": 1
       }
     }
   ]
