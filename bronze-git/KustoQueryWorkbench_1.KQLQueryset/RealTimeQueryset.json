@@ -1,0 +1,28 @@
+{
+  "queryset": {
+    "version": "1.0.0",
+    "dataSources": [
+      {
+        "id": "b211c3b6-0a31-48d8-899b-4f7b363e3241",
+        "clusterUri": "https://trd-ffnpc42wtc4t4gcjrw.z5.kusto.fabric.microsoft.com",
+        "type": "Fabric",
+        "databaseItemId": "46cedc29-da42-4353-98c0-669d75a67d9b",
+        "databaseItemName": "Monitoring Eventhouse"
+      }
+    ],
+    "tabs": [
+      {
+        "id": "7a5b02bf-c395-4f52-9bcf-b700b9b2e1ab",
+        "content": "//***********************************************************************************************************\n// Here are two articles to help you get started with KQL:\n// KQL reference guide - https://aka.ms/KQLguide\n// SQL - KQL conversions - https://aka.ms/sqlcheatsheet\n//***********************************************************************************************************\n\n// Use \"take\" to view a sample number of records in the table and check the data.\nYOUR_TABLE_HERE\n| take 100\nMonitoring Eventhouse\n// See how many records are in the table.\nYOUR_TABLE_HERE\n| count\n\n// This query returns the number of ingestions per hour in the given table.\nYOUR_TABLE_HERE\n| summarize IngestionCount = count() by bin(ingestion_time(), 1h)\n\n",
+        "title": "Tab",
+        "dataSourceId": "b211c3b6-0a31-48d8-899b-4f7b363e3241"
+      },
+      {
+        "id": "8bac3522-d957-4341-9442-8fff7da8d5b3",
+        "content": "EventhouseCommandLogs\n| take 100\n\n\nEventhouseCommandLogs    // count the number of rows from the result   \n| count \n\n\nEventhouseCommandLogs\n| take 100\n\n\nFunctionSetMetrics\n|take 100 \n\n\nlet nested_bonds = \n(\n    let bounds = \n    EventhouseCommandLogs\n    | summarize \n        maxx = max(Timestamp), \n        minn = min(Timestamp), \n        min_cap = min(CapacityId);\n\n    bounds\n    | join kind=inner (\n        EventhouseCommandLogs\n    ) on $left.min_cap == $right.CapacityId;\n);\nnested_bonds\n|take 100\n\n",
+        "title": "",
+        "dataSourceId": "b211c3b6-0a31-48d8-899b-4f7b363e3241"
+      }
+    ]
+  }
+}
